@@ -19,9 +19,7 @@ const MovieItem=(props)=> {
                     <View style={styles.movieItemDetails}>
                         <Text style={styles.movieItemTitle}>{props.route.params.item.title}</Text>
                         <Text>{props.route.params.item.overview}</Text>
-                     
                     </View>
-                    
                </View>
             </ScrollView>
             

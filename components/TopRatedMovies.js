@@ -1,26 +1,28 @@
 import React, { useState , useEffect} from "react";
 import { View, Text, StyleSheet , FlatList, TouchableOpacity, Image} from "react-native";
-import { Container, Header, Content, Card, CardItem, Body } from 'native-base';
+import { Card, CardItem, Body } from 'native-base';
 import axios from "axios";
 import MovieItem from "./MovieItem";
 
-const PopularMovies = (props) => {
-    console.log("PROPSSSSSSSS!!!!!!",props)
-    const [popularMovies, setPopularMovies] = useState([]);
+const TopRatedMovies = (props) => {
+   
+    const [topRatedMovies, setTopRatedMovies] = useState([]);
      useEffect(()=> {
         const fetchData = async () => {
-            const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${props.api_key}`);
-            setPopularMovies(response.data.results);
+            const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${props.api_key}`);
+            setTopRatedMovies(response.data.results);
+            console.log("LATEST RESULTSS",response.data.results)
         }
         
         fetchData();
        
     }, [])
     
+    
     return(
         <View style={styles.screen}>
-            <Text>POPULAR MOVIE</Text>
-            <FlatList data={popularMovies} horizontal renderItem={({item})=> {
+            <Text>Top Rated MOVIE</Text>
+            <FlatList data={topRatedMovies} horizontal renderItem={({item})=> {
                 return(
                     <View>
                     <TouchableOpacity onPress={()=> props.navigation.navigate("MovieItem", {item})}>
@@ -48,4 +50,4 @@ const styles= StyleSheet.create({
     }
 })
 
-export default PopularMovies;
+export default TopRatedMovies;
