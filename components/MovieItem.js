@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ShadowPropTypesIOS, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 
 const MovieItem=(props)=> {
@@ -13,7 +13,6 @@ const MovieItem=(props)=> {
         )
     } else {
         return(
-            <ScrollView>
                 <View style={styles.MovieItemContainer}>
                     <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${props.route.params.item.poster_path}`}} style={{height: 500, width: 400}}/>
                     <View style={styles.movieItemDetails}>
@@ -21,8 +20,6 @@ const MovieItem=(props)=> {
                         <Text>{props.route.params.item.overview}</Text>
                     </View>
                </View>
-            </ScrollView>
-            
         )
     }
 }

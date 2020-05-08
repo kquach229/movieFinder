@@ -3,6 +3,7 @@ import { View, Text, StyleSheet , FlatList, TouchableOpacity, Image} from "react
 import { Card, CardItem, Body } from 'native-base';
 import axios from "axios";
 import MovieItem from "./MovieItem";
+import globalStyles from "../styles/globalStyles";
 
 const TopRatedMovies = (props) => {
    
@@ -21,7 +22,7 @@ const TopRatedMovies = (props) => {
     
     return(
         <View style={styles.screen}>
-            <Text>Top Rated MOVIE</Text>
+            <Text style={globalStyles.sectionHeaderFont}>Top Rated MOVIE</Text>
             <FlatList data={topRatedMovies} horizontal renderItem={({item})=> {
                 return(
                     <View>
@@ -44,9 +45,9 @@ const TopRatedMovies = (props) => {
 
 const styles= StyleSheet.create({
     screen: {
-        flex: 1,
+        flex: 2/8,
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"flex-start"
     }
 })
 
