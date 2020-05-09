@@ -5,16 +5,27 @@ import CategoriesScreen from "../screens/CategoriesScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import AboutScreen from "../screens/AboutScreen";
 import MovieItem from "../components/MovieItem";
-import PopularMovies from "../components/PopularMovies";
+import Icon from 'react-native-vector-icons/Entypo';
 
 
-const Root =()=> {
+const Root =({navigation})=> {
 
     const Stack = createStackNavigator();
 
     return(
-        <Stack.Navigator>
-            <Stack.Screen options={{title:"DISCOVER"}} name="HomeScreen" component={HomeScreen} />
+        <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'papayawhip' }}}>
+            <Stack.Screen 
+                options={{
+                    title:"DISCOVER",
+                    headerLeft: ()=> (
+                        <Icon.Button 
+                            name="menu" size={35} 
+                            color="tomato" backgroundColor="papayawhip" 
+                            onPress={()=>navigation.openDrawer()}
+                        />
+                    )
+                 }}
+                    name="HomeScreen" component={HomeScreen} />
             <Stack.Screen name="CategoriesScreen" component={CategoriesScreen} />
             <Stack.Screen name="FavoritesScreen" component={FavoritesScreen} />
             <Stack.Screen name="AboutScreen" component={AboutScreen} />

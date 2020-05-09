@@ -28,7 +28,7 @@ const NowPlayingMovies = (props) => {
                     <View>
                     <TouchableOpacity onPress={()=> props.navigation.navigate("MovieItem", {item})}>
                         <Card style={{flexDirection:"row"}}>
-                            <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${item.poster_path}`}} style={{height: 100, width: 100}}/>
+                            <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${item.poster_path}`}} style={{height: 120, width: 100}}/>
                         <View style={{padding: 10}}>
                             <MovieItem item={item}/>
                             <Text>{`Date of release: ${item.release_date}`}</Text>
@@ -47,7 +47,8 @@ const styles= StyleSheet.create({
     screen: {
         flex: 2/8,
         justifyContent:"center",
-        alignItems:"flex-start"
+        alignItems:"flex-start",
+        
     }
 })
 
