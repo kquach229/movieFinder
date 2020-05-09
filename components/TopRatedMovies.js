@@ -12,7 +12,6 @@ const TopRatedMovies = (props) => {
         const fetchData = async () => {
             const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${props.api_key}`);
             setTopRatedMovies(response.data.results);
-            console.log("LATEST RESULTSS",response.data.results)
         }
         
         fetchData();

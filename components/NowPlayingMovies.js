@@ -12,7 +12,6 @@ const NowPlayingMovies = (props) => {
         const fetchData = async () => {
             const response = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${props.api_key}`);
             setNowPlayingMovies(response.data.results);
-            console.log("LATEST RESULTSS",response.data.results)
         }
         
         fetchData();

@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import StarRatingComponent from "./StarRatingComponent";
+
 import { ScrollView } from "react-native-gesture-handler";
 import {Card} from "native-base";
 
 
 const MovieItem=(props)=> {
 
-    console.log("PROPSSSSS", props)
+    const isListView = props.navigation == undefined ? true : false;
+
+    console.log("PROPSSSSS", props);
     if(props.navigation == undefined) {
         return(
            <View style={{flexDirection:"column"}}>
                <View style={{flexDirection: 'row'}}>
                     <Text style={styles.listViewTitle}>{props.item.title}</Text>
                 </View>
-                <View>
-                    <StarRatingComponent rating={props.item.vote_average}/>
+                <View style={styles.voteContainer}>
+                    <StarRatingComponent isListView={isListView} rating={props.item.vote_average}/>
+                    <Text style={styles.voteCount}>{`(${props.item.vote_count})`}</Text>
                 </View>
               </View>
         )
@@ -44,7 +48,8 @@ const styles = StyleSheet.create({
     },
     movieItemTitle: {
         fontFamily:'Courgette',
-        fontSize: 20 
+        fontSize: 20 ,
+        paddingBottom: 30
 
     },
     movieItemDetails: {
@@ -64,6 +69,17 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         minHeight: 250
+    },
+    voteContainer: {
+        flexDirection:"row",
+        justifyContent:"flex-start",
+        alignItems:"center"
+        
+    },
+    voteCount: {
+        fontSize:12,
+        color:"grey",
+        marginTop: 30
     }
     
 })

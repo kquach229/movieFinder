@@ -12,7 +12,7 @@ const App =()=> {
   const Drawer = createDrawerNavigator();
   return(
       <NavigationContainer>
-        <Drawer.Navigator>
+        <Drawer.Navigator drawerContentOptions={{activeTintColor: 'tomato',}} drawerStyle={{backgroundColor:"papayawhip"}}>
           <Drawer.Screen name="HomeScreen" component={Root}/>
           <Drawer.Screen name="AboutScreen" component={AboutScreen}/>
         </Drawer.Navigator>

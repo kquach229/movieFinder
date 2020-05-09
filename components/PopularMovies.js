@@ -6,7 +6,6 @@ import MovieItem from "./MovieItem";
 import globalStyles from "../styles/globalStyles";
 
 const PopularMovies = (props) => {
-    console.log("PROPSSSSSSSS!!!!!!",props)
     const [popularMovies, setPopularMovies] = useState([]);
      useEffect(()=> {
         const fetchData = async () => {
