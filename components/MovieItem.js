@@ -10,7 +10,6 @@ const MovieItem=(props)=> {
 
     const isListView = props.navigation == undefined ? true : false;
     console.disableYellowBox = true;
-    console.log("PROPSSSSS", props);
     if(props.navigation == undefined) {
         return(
            <View style={{flexDirection:"column"}}>
@@ -31,6 +30,10 @@ const MovieItem=(props)=> {
                     <View style={styles.movieItemDetails}>
                         <Card style={styles.card}>
                             <Text style={styles.movieItemTitle}>{props.route.params.item.title}</Text>
+                        <View style={styles.movieItemSubinfo}>
+                            <Text>{`Release date: ${props.route.params.item.release_date}`}</Text>
+                            <Text>{`Original language: ${props.route.params.item.original_language}`}</Text>
+                        </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
                         </Card>
@@ -60,11 +63,14 @@ const styles = StyleSheet.create({
         alignItems:"center",
         
     },
+    movieItemSubinfo: {
+        flexDirection: "row",
+        padding: 10
+    },
     listViewTitle: {
         fontFamily:'Courgette',
         width: 0,
         flexGrow: 1,
-
         marginBottom: -20
         
     },
@@ -74,8 +80,7 @@ const styles = StyleSheet.create({
         flexDirection:"column",
         justifyContent:"center",
         alignItems:"center",
-        minHeight: 250,
-        
+        minHeight: 270,
     },
     voteContainer: {
         flexDirection:"row",

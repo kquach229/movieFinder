@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity, ImageBackground ,Sc
 import PopularMovies from "../components/PopularMovies";
 import TopRatedMovies from "../components/TopRatedMovies";
 import LatestMovies from "../components/NowPlayingMovies";
-import Carousel from "../components/Carousel";
+import MyCarousel from "../components/Carousel";
 
 
 const HomeScreen =({navigation})=> {
@@ -15,7 +15,7 @@ const HomeScreen =({navigation})=> {
         <SafeAreaView style={styles.screen}>
         <ScrollView>
         <View style={styles.contentContainer}>
-                <Carousel/>
+                <MyCarousel api_key={API_KEY2}/>
                 <View style={styles.flatlistContainer}>
                 <LatestMovies navigation={navigation} api_key={API_KEY2} />
                 <PopularMovies navigation={navigation} api_key={API_KEY2}/>

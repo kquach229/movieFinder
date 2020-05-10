@@ -1,57 +1,47 @@
-import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import Carousel from "pinar";
+import React, { useState, useEffect } from "react";
+import Carousel from 'react-native-snap-carousel';
+import { View , Text, Image } from "react-native";
+import axios from "axios";
 
 
 
-const MovieCarousel =()=> {
-    return(
-        <Carousel style={styles.carouselContainer}>
-            <View style={styles.slide1}>
-                <Text style={styles.text}>1</Text>
-            </View>
-            <View style={styles.slide2}>
-                <Text style={styles.text}>2</Text>
-            </View>
-            <View style={styles.slide3}>
-                <Text style={styles.text}>3</Text>
-            </View>
-  </Carousel>
-    )
+class MyCarousel extends React.Component {
+
+   
+    state = {
+        entries: []
+    }
+
+   
+    componentDidMount() {
+        axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${this.props.api_key}`)
+        .then(response=> this.setState({entries: response.data.results}))
+        console.log(this.state.entries)
+    }
+
     
+    _renderItem ({item, index}) {
+        return (
+            <View>
+               <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${item.poster_path}`}} style={{height: 220, width: 300}}/>
+            </View>
+        );
+    }
+    render() {
+ 
+        console.log(this.state.entries)
+        return (
+            <Carousel
+              data={this.state.entries}
+              renderItem={this._renderItem}
+              sliderWidth={500}
+              itemWidth={700}
+              containerCustomStyle={{flexGrow: 0}}
+              contentContainerCustomStyle={{ justifyContent:"center", alignItems:"center"}}
+            />
+        );
+    }
 }
-
-const styles =  StyleSheet.create({
-  carouselContainer: {
-    height: 200,
-    
-  },
-  slide1: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#a3c9a8"
-  },
-  slide2: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#84b59f"
-  },
-  slide3: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#69a297"
-  },
-  text: {
-    color: "#1f2d3d",
-    opacity: 0.7,
-    fontSize: 48,
-    fontWeight: "bold"
-  }
-});
-
-
-export default MovieCarousel;
+   
+export default MyCarousel;
 
