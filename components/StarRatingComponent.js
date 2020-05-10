@@ -1,5 +1,4 @@
 import React from "react";
-import { View, Text, ListView } from "react-native";
 import { Rating, AirbnbRating } from 'react-native-ratings';
 
 const StarRatingComponent =(props)=> {
@@ -14,21 +13,19 @@ const StarRatingComponent =(props)=> {
             size={10}
             reviewSize={10}
             isDisabled={isEditable}
-            reviews={["Terrible","Bad", "Poor", "Viewable", "Meh", "It's Alright", "Good", "Enjoyable", "Excellent", "Amazing!" ]}
         />
         )
     } else {
-
-    return(
-        <AirbnbRating
-            count={10}
-            defaultRating={props.rating}
-            size={20}
-            reviewSize={20}
-            isDisabled={isEditable}
-            reviews={["Terrible","Bad", "Poor", "Viewable", "Meh", "It's Alright", "Good", "Enjoyable", "Excellent", "Amazing!" ]}
-        />
-    )
+        return(
+            <AirbnbRating
+                count={10}
+                defaultRating={props.rating}
+                size={20}
+                reviewSize={20}
+                isDisabled={isEditable}
+                reviews={["Terrible","Bad", "Poor", "Viewable", "Meh", "It's Alright", "Good", "Enjoyable", "Excellent", "Amazing!" ]}
+            />
+        )
     }
 }
 

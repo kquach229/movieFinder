@@ -1,22 +1,20 @@
 import React from "react";
-import { Image } from "react-native";
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from "../screens/HomeScreen";
 import CategoriesScreen from "../screens/CategoriesScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import AboutScreen from "../screens/AboutScreen";
 import MovieItem from "../components/MovieItem";
 import Icon from 'react-native-vector-icons/Entypo';
+import TabRoot from "../root/TabRoot";
 
-
-const Root =({navigation})=> {
+const StackRoot =({navigation})=> {
 
     const Stack = createStackNavigator();
 
     return(
         <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'papayawhip' }}}>
             <Stack.Screen 
-                name="HomeScreen" component={HomeScreen}
+                name="HomeScreen" component={TabRoot}
                 options={{
                     headerTitleAlign:"center",
                     headerTitle: "Tully Movies",
@@ -41,4 +39,4 @@ const Root =({navigation})=> {
 }
 
 
-export default Root;
+export default StackRoot;

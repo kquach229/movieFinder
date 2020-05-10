@@ -3,8 +3,6 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity, ImageBackground ,Sc
 import PopularMovies from "../components/PopularMovies";
 import TopRatedMovies from "../components/TopRatedMovies";
 import LatestMovies from "../components/NowPlayingMovies";
-import MyCarousel from "../components/Carousel";
-
 
 const HomeScreen =({navigation})=> {
     
@@ -12,19 +10,17 @@ const HomeScreen =({navigation})=> {
 
     return(
         <ImageBackground source={require("../assets/images/admit.jpg")} style={styles.backgroundImage}>   
-        <SafeAreaView style={styles.screen}>
-        <ScrollView>
-        <View style={styles.contentContainer}>
-                <MyCarousel api_key={API_KEY2}/>
-                <View style={styles.flatlistContainer}>
-                <LatestMovies navigation={navigation} api_key={API_KEY2} />
-                <PopularMovies navigation={navigation} api_key={API_KEY2}/>
-                <TopRatedMovies navigation={navigation} api_key={API_KEY2}/>  
-                </View>
-                
-        </View>
-        </ScrollView>
-        </SafeAreaView>
+            <SafeAreaView style={styles.screen}>
+                <ScrollView>
+                    <View style={styles.contentContainer}>
+                        <View style={styles.flatlistContainer}>
+                            <LatestMovies navigation={navigation} api_key={API_KEY2} />
+                            <PopularMovies navigation={navigation} api_key={API_KEY2}/>
+                            <TopRatedMovies navigation={navigation} api_key={API_KEY2}/>  
+                        </View>
+                    </View>
+                </ScrollView>
+            </SafeAreaView>
         </ImageBackground>
  
     )
