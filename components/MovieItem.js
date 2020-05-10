@@ -9,7 +9,7 @@ import {Card} from "native-base";
 const MovieItem=(props)=> {
 
     const isListView = props.navigation == undefined ? true : false;
-
+    console.disableYellowBox = true;
     console.log("PROPSSSSS", props);
     if(props.navigation == undefined) {
         return(
@@ -19,7 +19,7 @@ const MovieItem=(props)=> {
                 </View>
                 <View style={styles.voteContainer}>
                     <StarRatingComponent isListView={isListView} rating={props.item.vote_average}/>
-                    <Text style={styles.voteCount}>{`(${props.item.vote_count})`}</Text>
+                    <Text style={styles.voteCount}>{`(${props.item.vote_average}/10)`}</Text>
                 </View>
               </View>
         )
@@ -49,12 +49,16 @@ const styles = StyleSheet.create({
     movieItemTitle: {
         fontFamily:'Courgette',
         fontSize: 20 ,
-        paddingBottom: 30
+        paddingBottom: 30,
+        textDecorationLine:"underline",
+        textDecorationStyle:"solid",
+        fontWeight:"bold"
 
     },
     movieItemDetails: {
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"center",
+        
     },
     listViewTitle: {
         fontFamily:'Courgette',

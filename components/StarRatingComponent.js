@@ -12,7 +12,7 @@ const StarRatingComponent =(props)=> {
             count={10}
             defaultRating={props.rating}
             size={10}
-            reviewSize={2}
+            reviewSize={1}
             isDisabled={isEditable}
             reviews={["Terrible","Bad", "Poor", "Viewable", "Meh", "It's Alright", "Good", "Enjoyable", "Excellent", "Amazing!" ]}
         />
@@ -24,7 +24,7 @@ const StarRatingComponent =(props)=> {
             count={10}
             defaultRating={props.rating}
             size={20}
-            reviewSize={2}
+            reviewSize={20}
             isDisabled={isEditable}
             reviews={["Terrible","Bad", "Poor", "Viewable", "Meh", "It's Alright", "Good", "Enjoyable", "Excellent", "Amazing!" ]}
         />
