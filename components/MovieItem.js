@@ -64,6 +64,8 @@ const styles = StyleSheet.create({
         fontFamily:'Courgette',
         width: 0,
         flexGrow: 1,
+
+        marginBottom: -20
         
     },
     card:{
@@ -72,7 +74,8 @@ const styles = StyleSheet.create({
         flexDirection:"column",
         justifyContent:"center",
         alignItems:"center",
-        minHeight: 250
+        minHeight: 250,
+        
     },
     voteContainer: {
         flexDirection:"row",

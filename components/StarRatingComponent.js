@@ -12,7 +12,7 @@ const StarRatingComponent =(props)=> {
             count={10}
             defaultRating={props.rating}
             size={10}
-            reviewSize={1}
+            reviewSize={10}
             isDisabled={isEditable}
             reviews={["Terrible","Bad", "Poor", "Viewable", "Meh", "It's Alright", "Good", "Enjoyable", "Excellent", "Amazing!" ]}
         />

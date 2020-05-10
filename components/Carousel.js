@@ -23,7 +23,8 @@ const MovieCarousel =()=> {
 
 const styles =  StyleSheet.create({
   carouselContainer: {
-    height: 200
+    height: 200,
+    
   },
   slide1: {
     flex: 1,

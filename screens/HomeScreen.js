@@ -14,14 +14,14 @@ const HomeScreen =({navigation})=> {
         <ImageBackground source={require("../assets/images/admit.jpg")} style={styles.backgroundImage}>   
         <SafeAreaView style={styles.screen}>
         <ScrollView>
-        <View>
-        
         <View style={styles.contentContainer}>
-            <Carousel/>
+                <Carousel/>
+                <View style={styles.flatlistContainer}>
                 <LatestMovies navigation={navigation} api_key={API_KEY2} />
                 <PopularMovies navigation={navigation} api_key={API_KEY2}/>
                 <TopRatedMovies navigation={navigation} api_key={API_KEY2}/>  
-        </View>
+                </View>
+                
         </View>
         </ScrollView>
         </SafeAreaView>
@@ -42,6 +42,9 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center"
     },
+    flatlistContainer: {
+        marginTop: 30
+    }
 })
 
 export default HomeScreen;
