@@ -1,8 +1,6 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
-import CategoriesScreen from "../screens/CategoriesScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
-import AboutScreen from "../screens/AboutScreen";
 import MovieItem from "../components/MovieItem";
 import Icon from 'react-native-vector-icons/Entypo';
 import TabRoot from "../root/TabRoot";
@@ -33,7 +31,6 @@ const StackRoot =({navigation})=> {
                             onPress={()=>navigation.openDrawer()}
                         />)
                  }}/>
-            <Stack.Screen name="CategoriesScreen" component={CategoriesScreen} />
             <Stack.Screen name="FavoritesScreen" component={FavoritesScreen} />
             <Stack.Screen name="MovieItem" component={MovieItem}/>
         </Stack.Navigator>

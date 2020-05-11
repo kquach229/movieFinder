@@ -2,7 +2,6 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../screens/HomeScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
-import CategoriesScreen from "../screens/CategoriesScreen";
 import SearchScreen from "../screens/SearchScreen";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -26,12 +25,6 @@ const TabRoot=()=> {
             <MaterialIcons name="favorite" color={color} size={size} />
           ),
         }}  name="FavoritesScreens" component={FavoritesScreen} />
-         <Tab.Screen options={{
-          tabBarLabel: 'Categories',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="folder-multiple" color={color} size={size} />
-          ),
-        }}  name="CategoriesScreens" component={CategoriesScreen} />
          <Tab.Screen options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color, size }) => (
