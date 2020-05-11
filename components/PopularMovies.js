@@ -18,7 +18,7 @@ const PopularMovies = (props) => {
     
     return(
         <View style={styles.screen}>
-            <Text style={globalStyles.sectionHeaderFont}>POPULAR MOVIE</Text>
+            <Text style={globalStyles.sectionHeaderFont}>Popular On Tully</Text>
             <FlatList data={popularMovies} horizontal renderItem={({item})=> {
                 return(
                     <View>

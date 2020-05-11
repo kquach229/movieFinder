@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, ImageBackground} from "react-native";
 
 const AboutScreen =()=> {
     return(
         <View style={styles.screen}>
-            <Text>This is the AboutScreen</Text>
+            <ImageBackground style={{height:"100%", width: "100%"}} resizeMode="cover" source={require("../assets/images/park-at-night.jpg")}>
+            <Text style={{color:"red"}}>This is the AboutScreen</Text>
+            </ImageBackground>
+           
         </View>
     )
 }
@@ -13,7 +16,9 @@ styles = StyleSheet.create({
     screen: {
         flex: 1,
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"center",
+        backgroundColor:"tomato"
+        
     }
 })
 

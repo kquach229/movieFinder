@@ -35,7 +35,6 @@ const StackRoot =({navigation})=> {
                  }}/>
             <Stack.Screen name="CategoriesScreen" component={CategoriesScreen} />
             <Stack.Screen name="FavoritesScreen" component={FavoritesScreen} />
-            <Stack.Screen name="AboutScreen" component={AboutScreen} />
             <Stack.Screen name="MovieItem" component={MovieItem}/>
         </Stack.Navigator>
     )

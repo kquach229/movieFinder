@@ -18,7 +18,7 @@ const TopRatedMovies = (props) => {
     
     return(
         <View style={styles.screen}>
-            <Text style={globalStyles.sectionHeaderFont}>Top Rated MOVIE</Text>
+            <Text style={globalStyles.sectionHeaderFont}>Top Rated Movies</Text>
             <FlatList data={topRatedMovies} horizontal renderItem={({item})=> {
                 return(
                     <View>

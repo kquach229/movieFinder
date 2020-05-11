@@ -13,7 +13,6 @@ const CategoriesScreen =()=> {
         const fetchData = async () => {
             const response = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY2}`);
             setGenres(response.data.genres);
-            console.log("CATEGORIES",response.data);
         }
         fetchData();
     }, []);

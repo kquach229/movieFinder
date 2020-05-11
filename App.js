@@ -1,9 +1,9 @@
 import 'react-native-gesture-handler';
 import React from"react";
 import StackRoot from "./root/StackRoot";
-import AboutScreen from "./screens/AboutScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+import AboutStack from './root/AboutStack';
 
 
 const App =()=> {
@@ -13,7 +13,7 @@ const App =()=> {
       <NavigationContainer>
         <Drawer.Navigator drawerContentOptions={{activeTintColor: 'tomato'}} drawerStyle={{backgroundColor:"papayawhip"}}>
           <Drawer.Screen  options={{title:"Home"}} name="HomeScreen" component={StackRoot}/>
-          <Drawer.Screen  options={{title:"About"}} name="AboutScreen" component={AboutScreen}/>
+          <Drawer.Screen  name="AboutScreen" component={AboutStack}/> 
         </Drawer.Navigator>
       </NavigationContainer>
   )
