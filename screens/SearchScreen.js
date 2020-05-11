@@ -40,7 +40,7 @@ class SearchScreen extends React.Component {
         
       
         return(
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+
                 <View style={styles.screen}>
                 <TextInput 
                     style={styles.input}
@@ -65,7 +65,7 @@ class SearchScreen extends React.Component {
                                 )
                     }} />
             </View>
-            </TouchableWithoutFeedback>
+         
             
         )
     }
