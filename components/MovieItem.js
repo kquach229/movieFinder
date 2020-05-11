@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import StarRatingComponent from "./StarRatingComponent";
 import { Card } from "native-base";
+
 
 
 const MovieItem=(props)=> {
@@ -25,7 +26,7 @@ const MovieItem=(props)=> {
         return(
             <ScrollView>
                 <View style={styles.MovieItemContainer}>
-                    <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${props.route.params.item.poster_path}`}} style={{height: 500, width: 420}}/>
+                    {<Image source={{uri:`https://image.tmdb.org/t/p/w1280/${props.route.params.item.poster_path}`}} style={{height: 500, width: 420}}/>}
                     <View style={styles.movieItemDetails}>
                         <Card style={styles.card}>
                             <Text style={styles.movieItemTitle}>{props.route.params.item.title}</Text>
