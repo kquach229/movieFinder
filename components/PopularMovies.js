@@ -11,6 +11,7 @@ const PopularMovies = (props) => {
         const fetchData = async () => {
             const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${props.api_key}`);
             setPopularMovies(response.data.results);
+            console.log("POPULAR",response.data )
         }
         fetchData();
     }, [])

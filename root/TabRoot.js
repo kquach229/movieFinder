@@ -3,14 +3,17 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../screens/HomeScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import CategoriesScreen from "../screens/CategoriesScreen";
+import SearchScreen from "../screens/SearchScreen";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const Tab = createBottomTabNavigator();
 
 const TabRoot=()=> {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+        tabBarOptions={{style: {backgroundColor:"papayawhip"}}}>
       <Tab.Screen options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
@@ -29,6 +32,12 @@ const TabRoot=()=> {
             <MaterialCommunityIcons name="folder-multiple" color={color} size={size} />
           ),
         }}  name="CategoriesScreens" component={CategoriesScreen} />
+         <Tab.Screen options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="search" color={color} size={size} />
+          ),
+        }}  name="SearchScreen" component={SearchScreen} />
     </Tab.Navigator>
   );
 }

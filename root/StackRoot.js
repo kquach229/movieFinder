@@ -14,7 +14,8 @@ const StackRoot =({navigation})=> {
     return(
         <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'papayawhip' }}}>
             <Stack.Screen 
-                name="HomeScreen" component={TabRoot}
+                name="HomeScreen" 
+                component={TabRoot}
                 options={{
                     headerTitleAlign:"center",
                     headerTitle: "Tully Movies",
@@ -25,8 +26,10 @@ const StackRoot =({navigation})=> {
                     },
                     headerLeft: ()=> (
                         <Icon.Button 
-                            name="menu" size={35} 
-                            color="tomato" backgroundColor="papayawhip" 
+                            name="menu" 
+                            size={35} 
+                            color="tomato" 
+                            backgroundColor="papayawhip" 
                             onPress={()=>navigation.openDrawer()}
                         />)
                  }}/>
