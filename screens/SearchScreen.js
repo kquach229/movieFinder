@@ -37,6 +37,7 @@ class SearchScreen extends React.Component {
     }
 
     render() {
+        
         return(
 
                 <View style={styles.screen}>
@@ -80,13 +81,14 @@ const styles = StyleSheet.create({
     },
     input: {
         borderStyle:"solid", 
-        borderWidth: 5, 
+        borderWidth: 1, 
         width:"100%", 
         padding: 20,
         backgroundColor:"white",
         fontFamily:"Yesteryear-Regular",
         fontSize: 20,
-        color:"tomato"
+        color:"tomato",
+        borderRadius: 2
     },
     movieItem: {
         marginTop: 20,

@@ -18,7 +18,7 @@ const TvStack =({navigation})=> {
                     onPress={()=>navigation.openDrawer()}
                 />),
                     headerTitleAlign:"center",
-                    headerTitle: "Tully Movies",
+                    headerTitle: "Tully TV",
                     headerTitleStyle: {
                         fontFamily: "Yesteryear-Regular",
                         fontSize: 30,
