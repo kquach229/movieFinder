@@ -9,7 +9,7 @@ import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const Tab = createBottomTabNavigator();
 
-const TabRoot=()=> {
+const MoviesTabRoot=()=> {
   return (
     <Tab.Navigator
         tabBarOptions={{style: {backgroundColor:"papayawhip"}}}>
@@ -36,4 +36,4 @@ const TabRoot=()=> {
 }
 
 
-export default TabRoot;
+export default MoviesTabRoot;

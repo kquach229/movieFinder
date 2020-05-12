@@ -3,9 +3,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import FavoritesScreen from "../screens/FavoritesScreen";
 import MovieItem from "../components/MovieItem";
 import Icon from 'react-native-vector-icons/Entypo';
-import TabRoot from "../root/TabRoot";
+import MoviesTabRoot from "../root/MoviesTabRoot";
 
-const StackRoot =({navigation})=> {
+const MovieStackRoot =({navigation})=> {
 
     const Stack = createStackNavigator();
 
@@ -13,7 +13,7 @@ const StackRoot =({navigation})=> {
         <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: 'papayawhip' }}}>
             <Stack.Screen 
                 name="HomeScreen" 
-                component={TabRoot}
+                component={MoviesTabRoot}
                 options={{
                     headerTitleAlign:"center",
                     headerTitle: "Tully Movies",
@@ -38,4 +38,4 @@ const StackRoot =({navigation})=> {
 }
 
 
-export default StackRoot;
+export default MovieStackRoot;

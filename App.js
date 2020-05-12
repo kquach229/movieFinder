@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler';
 import React from"react";
-import StackRoot from "./root/StackRoot";
+import MovieStackRoot from "./root/MovieStackRoot";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import AboutStack from './root/AboutStack';
-import TvStack from "./root/TvStack";
+import AboutStackRoot from './root/AboutStackRoot';
+import TvStackRoot from "./root/TvStackRoot";
 
 
 const App =()=> {
@@ -13,9 +13,9 @@ const App =()=> {
   return(
       <NavigationContainer>
         <Drawer.Navigator drawerContentOptions={{activeTintColor: 'tomato'}} drawerStyle={{backgroundColor:"papayawhip"}}>
-          <Drawer.Screen  options={{title:"Tully Movies"}} name="HomeScreen" component={StackRoot}/>
-          <Drawer.Screen  options={{title: "Tully TV"}} name="TvShows" component={TvStack}/>
-          <Drawer.Screen  options={{title: "About Tully Movies"}} name="AboutScreen" component={AboutStack}/>  
+          <Drawer.Screen  options={{title:"Tully Movies"}} name="HomeScreen" component={MovieStackRoot}/>
+          <Drawer.Screen  options={{title: "Tully TV"}} name="TvShows" component={TvStackRoot}/>
+          <Drawer.Screen  options={{title: "About Tully Movies"}} name="AboutScreen" component={AboutStackRoot}/>  
         </Drawer.Navigator>
       </NavigationContainer>
   )

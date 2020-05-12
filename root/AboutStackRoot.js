@@ -1,11 +1,9 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
-import TvShows from "../screens/TvShows";
-import TvItem from "../components/TvItem";
+import AboutScreen from "../screens/AboutScreen";
 import Icon from 'react-native-vector-icons/Entypo';
 
-
-const TvStack =({navigation})=> {
+const AboutStackRoot =({navigation})=> {
 
     const Stack = createStackNavigator();
 
@@ -20,17 +18,16 @@ const TvStack =({navigation})=> {
                     onPress={()=>navigation.openDrawer()}
                 />),
                     headerTitleAlign:"center",
-                    headerTitle: "Tully TV",
+                    headerTitle: "Tully Movies",
                     headerTitleStyle: {
                         fontFamily: "Yesteryear-Regular",
                         fontSize: 30,
                         color:"tomato"
                     }
-                    }} name="TvShows" component={TvShows} />
-                    <Stack.Screen name="TvItem" component={TvItem}/>
+                    }} name="AboutScreen" component={AboutScreen} />
         </Stack.Navigator>
     )
 }
 
 
-export default TvStack;
+export default AboutStackRoot;

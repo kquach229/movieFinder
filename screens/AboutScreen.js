@@ -8,7 +8,6 @@ const AboutScreen =()=> {
             <ImageBackground style={{height:"100%", width: "100%"}} resizeMode="cover" source={require("../assets/images/park-at-night.jpg")}>
                 <TypeWriter/>
             </ImageBackground>
-           
         </View>
     )
 }
