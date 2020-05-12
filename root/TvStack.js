@@ -1,7 +1,9 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
-import TvScreen from "../screens/TvShows";
+import TvShows from "../screens/TvShows";
+import TvItem from "../components/TvItem";
 import Icon from 'react-native-vector-icons/Entypo';
+
 
 const TvStack =({navigation})=> {
 
@@ -24,7 +26,8 @@ const TvStack =({navigation})=> {
                         fontSize: 30,
                         color:"tomato"
                     }
-                    }} name="TvScreen" component={TvScreen} />
+                    }} name="TvShows" component={TvShows} />
+                    <Stack.Screen name="TvItem" component={TvItem}/>
         </Stack.Navigator>
     )
 }

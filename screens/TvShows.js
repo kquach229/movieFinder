@@ -3,10 +3,11 @@ import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import PopularTv from "../components/PopularTv"
 
 
-const TvShows =()=> {
+const TvShows =(props)=> {
+    console.log("TVPROPS",props)
     return(
         <ImageBackground source={require("../assets/images/tv.jpg")} style={styles.background}>
-            <PopularTv/>
+            <PopularTv navigation={props.navigation}/>
         </ImageBackground>
     )
 }

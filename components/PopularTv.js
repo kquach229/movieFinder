@@ -3,6 +3,7 @@ import { View, Text, StyleSheet , FlatList, TouchableOpacity, Image} from "react
 import { Card } from 'native-base';
 import axios from "axios";
 import globalStyles from "../styles/globalStyles";
+import TvItem from "./TvItem";
 
 const PopularTv = (props) => {
 
@@ -19,18 +20,19 @@ const PopularTv = (props) => {
         fetchData();
     }, [])
     
-    
+    console.log("POPULARTVVVV!!!!!!", props.navigation.navigate)
     return(
         <View style={styles.screen}>
             <Text style={globalStyles.sectionHeaderFont}>Popular TV Shows</Text>
             <FlatList horizontal data={popularTv} renderItem={({item})=> {
                 return(
                     <View>
-                        <TouchableOpacity onPress={()=> props.navigation.navigate("MovieItem", {item})}>
+                        <TouchableOpacity onPress={()=> props.navigation.navigate("TvItem", {item})}>
                             <Card style={{flexDirection:"row"}}>
                                 <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${item.poster_path}`}} style={{height: 120, width: 100}}/>
                                 <View style={{padding: 10}}>
-                                    <Text>{`Date of release: ${item.release_date}`}</Text>
+                                    <TvItem item={item}/>
+                                    <Text>{`First Air Date: ${item.first_air_date}`}</Text>
                                 </View>
                             </Card>
                         </TouchableOpacity>

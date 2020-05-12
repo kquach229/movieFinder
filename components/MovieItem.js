@@ -7,6 +7,7 @@ import { Card } from "native-base";
 
 const MovieItem=(props)=> {
 
+
     const isListView = props.navigation == undefined ? true : false;
     console.disableYellowBox = true;
 

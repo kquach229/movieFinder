@@ -14,6 +14,9 @@ const PopularMovies = (props) => {
         }
         fetchData();
     }, [])
+
+
+    console.log("POPULARMOVIIIEEESS", props)
     
     return(
         <View style={styles.screen}>

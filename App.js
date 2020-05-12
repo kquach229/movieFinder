@@ -14,7 +14,7 @@ const App =()=> {
       <NavigationContainer>
         <Drawer.Navigator drawerContentOptions={{activeTintColor: 'tomato'}} drawerStyle={{backgroundColor:"papayawhip"}}>
           <Drawer.Screen  options={{title:"Tully Movies"}} name="HomeScreen" component={StackRoot}/>
-          <Drawer.Screen  options={{title: "Tully TV"}} name="TvScreen" component={TvStack}/>
+          <Drawer.Screen  options={{title: "Tully TV"}} name="TvShows" component={TvStack}/>
           <Drawer.Screen  options={{title: "About Tully Movies"}} name="AboutScreen" component={AboutStack}/>  
         </Drawer.Navigator>
       </NavigationContainer>
