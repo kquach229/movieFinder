@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View, StyleSheet, ImageBackground } from "react-native";
-import PopularTv from "../components/PopularTv"
+import PopularTv from "../components/PopularTv";
+import MovieCarousel from "../components/MovieCarousel";
+import { ScrollView } from "react-native-gesture-handler";
 
 
 const TvShows =(props)=> {
@@ -9,8 +11,12 @@ const TvShows =(props)=> {
 
     console.log("TVPROPS",props)
     return(
+        
         <ImageBackground source={require("../assets/images/tv.jpg")} style={styles.background}>
-            <PopularTv api_key={API_KEY2} navigation={props.navigation}/>
+            <ScrollView>
+            <MovieCarousel navigation={props.navigation}/>
+                <PopularTv api_key={API_KEY2} navigation={props.navigation}/>
+            </ScrollView>     
         </ImageBackground>
     )
 }
