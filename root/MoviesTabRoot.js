@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../screens/HomeScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
-import SearchScreen from "../screens/SearchScreen";
+import SearchMoviesScreen from "../screens/SearchMoviesScreen";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
@@ -30,7 +30,7 @@ const MoviesTabRoot=()=> {
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="search" color={color} size={size} />
           ),
-        }}  name="SearchScreen" component={SearchScreen} />
+        }}  name="SearchMoviesScreen" component={SearchMoviesScreen} />
     </Tab.Navigator>
   );
 }

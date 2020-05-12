@@ -1,8 +1,5 @@
 import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from "../screens/HomeScreen";
-import FavoritesScreen from "../screens/FavoritesScreen";
-import SearchScreen from "../screens/SearchScreen";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from "react-native-vector-icons/FontAwesome";

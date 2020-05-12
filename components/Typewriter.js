@@ -14,7 +14,7 @@ const TypeWriter=()=> {
             <Text style={styles.headerText}>About Us</Text>
             <AutoTypingText
                 text={textObject.text}
-                charMovingTime={80}
+                charMovingTime={30}
                 delay={0}
                 style={{
                     fontSize: 30,

@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         width: "100%", 
         backgroundColor:"tomato",
         fontFamily:'Courgette',
-        flex: 1
+        flex: 1,
     }
    
 })

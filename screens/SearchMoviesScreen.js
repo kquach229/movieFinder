@@ -5,7 +5,7 @@ import MovieItem from "../components/MovieItem";
 
 const API_KEY1="54a83919a7f93d82a8b8bdd417544d6f";
 
-class SearchScreen extends React.Component {
+class SearchMoviesScreen extends React.Component {
 
     constructor(props) {
         super(props);
@@ -98,4 +98,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default SearchScreen;
+export default SearchMoviesScreen;
