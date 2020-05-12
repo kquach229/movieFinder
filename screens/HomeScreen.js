@@ -6,7 +6,7 @@ import LatestMovies from "../components/NowPlayingMovies";
 
 const HomeScreen =({navigation})=> {
     
-    const API_KEY2="54a83919a7f93d82a8b8bdd417544d6f";
+    const API_KEY1="54a83919a7f93d82a8b8bdd417544d6f";
 
     return(
         <ImageBackground source={require("../assets/images/admit.jpg")} style={styles.backgroundImage}>   
@@ -14,9 +14,9 @@ const HomeScreen =({navigation})=> {
                 <ScrollView>
                     <View style={styles.contentContainer}>
                         <View style={styles.flatlistContainer}>
-                            <LatestMovies navigation={navigation} api_key={API_KEY2} />
-                            <PopularMovies navigation={navigation} api_key={API_KEY2}/>
-                            <TopRatedMovies navigation={navigation} api_key={API_KEY2}/>  
+                            <LatestMovies navigation={navigation} api_key={API_KEY1} />
+                            <PopularMovies navigation={navigation} api_key={API_KEY1}/>
+                            <TopRatedMovies navigation={navigation} api_key={API_KEY1}/>  
                         </View>
                     </View>
                 </ScrollView>

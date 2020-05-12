@@ -45,7 +45,7 @@ const styles= StyleSheet.create({
         flex: 2/8,
         justifyContent:"center",
         alignItems:"flex-start",
-        
+        padding: 10
     }
 })
 

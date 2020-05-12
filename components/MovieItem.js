@@ -33,8 +33,7 @@ const MovieItem=(props)=> {
                             <Text style={styles.movieItemTitle}>{props.route.params.item.title}</Text>
                             <View style={styles.movieItemSubinfo}>
                                 <Text>{`Release date: ${props.route.params.item.release_date}`}</Text>
-                                <Text>{`Original language: ${props.route.params.item.original_language}`}</Text>
-                                <Text>{`Cast: `}</Text>
+                                <Text>{`Original language: ${props.route.params.item.original_language.toUpperCase()}`}</Text>
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
@@ -66,8 +65,8 @@ const styles = StyleSheet.create({
         
     },
     movieItemSubinfo: {
-        flexDirection: "row",
-        padding: 10
+        flexDirection: "column",
+        padding: 5
     },
     listViewTitle: {
         fontFamily:'Courgette',

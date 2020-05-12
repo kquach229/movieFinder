@@ -6,14 +6,12 @@ import globalStyles from "../styles/globalStyles";
 import TvItem from "./TvItem";
 
 const PopularTv = (props) => {
-
-    const API_KEY2="54a83919a7f93d82a8b8bdd417544d6f";
    
     const [popularTv, setPopularTv] = useState([]);
 
      useEffect(()=> {
         const fetchData = async () => {
-            const response = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY2}&language=en-US&page=1`);
+            const response = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${props.api_key}&language=en-US&page=1`);
             setPopularTv(response.data.results);
             console.log("PopularTV!!!!!!", response.data.results)
         }
@@ -32,7 +30,7 @@ const PopularTv = (props) => {
                                 <Image source={{uri:`https://image.tmdb.org/t/p/w1280/${item.poster_path}`}} style={{height: 120, width: 100}}/>
                                 <View style={{padding: 10}}>
                                     <TvItem item={item}/>
-                                    <Text>{`First Air Date: ${item.first_air_date}`}</Text>
+                                    <Text>{`First Aired: ${item.first_air_date}`}</Text>
                                 </View>
                             </Card>
                         </TouchableOpacity>
@@ -50,6 +48,7 @@ const styles= StyleSheet.create({
         flex: 2/8,
         justifyContent:"center",
         alignItems:"flex-start",
+        padding: 10
         
     }
 })

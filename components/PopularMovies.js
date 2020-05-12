@@ -5,6 +5,7 @@ import axios from "axios";
 import MovieItem from "./MovieItem";
 import globalStyles from "../styles/globalStyles";
 
+
 const PopularMovies = (props) => {
     const [popularMovies, setPopularMovies] = useState([]);
      useEffect(()=> {
@@ -44,7 +45,8 @@ const styles= StyleSheet.create({
     screen: {
         flex: 2/8,
         justifyContent:"center",
-        alignItems:"flex-start"
+        alignItems:"flex-start",
+        padding: 10
     }
 })
 

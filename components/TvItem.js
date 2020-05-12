@@ -33,8 +33,8 @@ const TvItem=(props)=> {
                         <Card style={styles.card}>
                             <Text style={styles.TvItemTitle}>{props.route.params.item.name}</Text>
                             <View style={styles.TvItemSubinfo}>
-                                <Text>{`Release date: ${props.route.params.item.first_air_date}`}</Text>
-                                <Text>{`Original language: ${props.route.params.item.original_language}`}</Text>
+                                <Text>{`First Aired: ${props.route.params.item.first_air_date}`}</Text>
+                                <Text>{`Original language: ${props.route.params.item.original_language.toUpperCase()}`}</Text>
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
@@ -66,8 +66,9 @@ const styles = StyleSheet.create({
         
     },
     TvItemSubinfo: {
-        flexDirection: "row",
-        padding: 10,
+        flexDirection: "column",
+        padding: 5,
+        
     },
     listViewTitle: {
         fontFamily:'Courgette',

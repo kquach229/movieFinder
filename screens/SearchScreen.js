@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Image, TouchableWithoutFeedback, Key
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import MovieItem from "../components/MovieItem";
 
-const API_KEY2="54a83919a7f93d82a8b8bdd417544d6f";
+const API_KEY1="54a83919a7f93d82a8b8bdd417544d6f";
 
 class SearchScreen extends React.Component {
 
@@ -17,7 +17,7 @@ class SearchScreen extends React.Component {
 
     handleSubmit =(e)=> {
 
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY2}&query=${this.state.searchTerm}`)
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY1}&query=${this.state.searchTerm}`)
             .then(data => data.json())
             .then(data=> {
                 this.setState({
