@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "../screens/HomeScreen";
-import FavoritesScreen from "../screens/FavoritesScreen";
+import FavoriteMoviesScreen from "../screens/FavoriteMoviesScreen";
 import SearchMoviesScreen from "../screens/SearchMoviesScreen";
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -24,7 +24,7 @@ const MoviesTabRoot=()=> {
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="favorite" color={color} size={size} />
           ),
-        }}  name="FavoritesScreens" component={FavoritesScreen} />
+        }}  name="FavoriteMoviesScreens" component={FavoriteMoviesScreen} />
          <Tab.Screen options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color, size }) => (

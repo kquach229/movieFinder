@@ -33,8 +33,8 @@ const TvItem=(props)=> {
                         <Card style={styles.card}>
                             <Text style={styles.TvItemTitle}>{props.route.params.item.name}</Text>
                             <View style={styles.TvItemSubinfo}>
-                                <Text>{`First Aired: ${props.route.params.item.first_air_date}`}</Text>
-                                <Text>{`Original language: ${props.route.params.item.original_language.toUpperCase()}`}</Text>
+                                <Text><Text style={styles.releaseDate}>First Aired:</Text> {props.route.params.item.first_air_date}</Text>
+                                <Text><Text style={styles.originalLanguage}>Original language:</Text>{props.route.params.item.original_language.toUpperCase()}</Text>
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
@@ -95,6 +95,12 @@ const styles = StyleSheet.create({
         fontSize:12,
         color: "grey",
         marginTop: 30
+    },
+    releaseDate: {
+        fontWeight:"bold"
+    },
+    originalLanguage: {
+        fontWeight: "bold"
     }
     
 })

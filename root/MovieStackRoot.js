@@ -1,6 +1,6 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
-import FavoritesScreen from "../screens/FavoritesScreen";
+import FavoriteMoviesScreen from "../screens/FavoriteMoviesScreen";
 import MovieItem from "../components/MovieItem";
 import Icon from 'react-native-vector-icons/Entypo';
 import MoviesTabRoot from "../root/MoviesTabRoot";
@@ -31,7 +31,7 @@ const MovieStackRoot =({navigation})=> {
                             onPress={()=>navigation.openDrawer()}
                         />)
                  }}/>
-            <Stack.Screen name="FavoritesScreen" component={FavoritesScreen} />
+            <Stack.Screen name="FavoriteMoviesScreen" component={FavoriteMoviesScreen} />
             <Stack.Screen name="MovieItem" component={MovieItem}/>
         </Stack.Navigator>
     )

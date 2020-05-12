@@ -32,8 +32,8 @@ const MovieItem=(props)=> {
                         <Card style={styles.card}>
                             <Text style={styles.movieItemTitle}>{props.route.params.item.title}</Text>
                             <View style={styles.movieItemSubinfo}>
-                                <Text>{`Release date: ${props.route.params.item.release_date}`}</Text>
-                                <Text>{`Original language: ${props.route.params.item.original_language.toUpperCase()}`}</Text>
+                                <Text><Text style={styles.releaseDate}>Release date:</Text> {props.route.params.item.release_date}</Text>
+                                <Text><Text style={styles.originalLanguage}>Original language:</Text> {props.route.params.item.original_language.toUpperCase()}</Text>
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
@@ -93,7 +93,14 @@ const styles = StyleSheet.create({
         fontSize:12,
         color: "grey",
         marginTop: 30
+    },
+    releaseDate: {
+        fontWeight: "bold"
+    },
+    originalLanguage: {
+        fontWeight:"bold"
     }
+
     
 })
 
