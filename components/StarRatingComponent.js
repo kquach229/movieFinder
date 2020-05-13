@@ -4,8 +4,9 @@ import { Rating, AirbnbRating } from 'react-native-ratings';
 
 const StarRatingComponent =(props)=> {
 
-    const handleThankYou=()=> {
-        Alert.alert("Thank You!", "Your vote is valuable",{text: "ok"})
+    const handleThankYou=(number)=> {
+        Alert.alert("Thank You!", `You voted ${number}/10!`,{text: "ok"})
+        console.log("rating", number)
     }
 
     const isEditable = props.isListView;
@@ -23,7 +24,7 @@ const StarRatingComponent =(props)=> {
     } else {
         return(
             <AirbnbRating
-                onFinishRating={handleThankYou}
+                onFinishRating={(number)=>handleThankYou(number)}
                 count={10}
                 defaultRating={props.rating}
                 size={20}

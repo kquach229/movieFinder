@@ -2,8 +2,6 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput, Image, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { FlatList, TouchableOpacity } from "react-native-gesture-handler";
 import TvItem from "../components/TvItem";
-
-
     
 const API_KEY2 = "69be92c192abcf1ad0768b2dc5245417";
 
@@ -39,8 +37,7 @@ class SearchTvScreen extends React.Component {
     }
 
     render() {
-        
-        
+    
         return(
 
                 <View style={styles.screen}>
@@ -67,8 +64,6 @@ class SearchTvScreen extends React.Component {
                                 )
                     }} />
             </View>
-         
-            
         )
     }
 }
