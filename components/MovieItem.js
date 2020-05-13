@@ -19,7 +19,7 @@ const MovieItem=(props)=> {
                </View>
                 <View style={styles.voteContainer}>
                     <StarRatingComponent isListView={isListView} rating={props.item.vote_average}/>
-                    <Text style={styles.voteCount}>{`(${props.item.vote_average}/10)`}</Text>
+                    <Text style={styles.listVoteCount}>{`(${props.item.vote_average}/10)`}</Text>
                 </View>
           </View>
         )
@@ -37,7 +37,6 @@ const MovieItem=(props)=> {
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
-                            <FavoriteComponent title={props.route.params.item.title} />
                         </Card>
                     </View>
                </View>
@@ -69,6 +68,10 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         padding: 5
     },
+    movieItemVoteCount: {
+        color: "grey",
+        fontSize: 20
+    },
     listViewTitle: {
         fontFamily:'Courgette',
         width: 0,
@@ -90,7 +93,7 @@ const styles = StyleSheet.create({
         alignItems: "center"
         
     },
-    voteCount: {
+    listVoteCount: {
         fontSize:12,
         color: "grey",
         marginTop: 30

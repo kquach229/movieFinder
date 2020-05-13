@@ -5,6 +5,8 @@ import { View, Text, Button } from "react-native";
 
 const FavoriteComponent =(props)=> {
 
+
+
     console.log("FAVORITES< ", props)
 
     const [favoriteMovies, setFavoriteMovies] = useState([])
