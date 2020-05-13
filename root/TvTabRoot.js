@@ -4,6 +4,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import TvShows from "../screens/TvShows";
+import SearchTvScreen from "../screens/SearchTvScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,6 +18,12 @@ const TabRoot=()=> {
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),
         }} name="TvShows" component={TvShows} />
+         <Tab.Screen options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="search" color={color} size={size} />
+          ),
+        }}  name="SearchTvScreen" component={SearchTvScreen} />
     </Tab.Navigator>
   );
 }

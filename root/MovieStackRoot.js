@@ -31,7 +31,6 @@ const MovieStackRoot =({navigation})=> {
                             onPress={()=>navigation.openDrawer()}
                         />)
                  }}/>
-            <Stack.Screen name="FavoriteMoviesScreen" component={FavoriteMoviesScreen} />
             <Stack.Screen name="MovieItem" component={MovieItem}/>
         </Stack.Navigator>
     )

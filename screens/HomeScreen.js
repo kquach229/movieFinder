@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, ImageBackground ,ScrollView, SafeAreaView} from "react-native";
+import React from "react";
+import { View,  StyleSheet,  ImageBackground ,ScrollView, SafeAreaView} from "react-native";
 import PopularMovies from "../components/PopularMovies";
 import TopRatedMovies from "../components/TopRatedMovies";
 import LatestMovies from "../components/NowPlayingMovies";

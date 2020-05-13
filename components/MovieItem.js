@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import { View, Text, StyleSheet, Image, ScrollView, Button } from "react-native";
 import StarRatingComponent from "./StarRatingComponent";
 import { Card } from "native-base";
+import FavoriteComponent from "../components/FavoriteComponent";
 
 
 
 const MovieItem=(props)=> {
-
 
     const isListView = props.navigation == undefined ? true : false;
     console.disableYellowBox = true;
@@ -37,6 +37,7 @@ const MovieItem=(props)=> {
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>
+                            <FavoriteComponent title={props.route.params.item.title} />
                         </Card>
                     </View>
                </View>

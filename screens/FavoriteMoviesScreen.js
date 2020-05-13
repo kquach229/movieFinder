@@ -1,7 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 
-const FavoriteMoviesScreen =()=> {
+const FavoriteMoviesScreen =(props)=> {
+    console.log("FAVORITES SCREEN",props)
     return(
         <View style={styles.screen}>
             <Text>This is the FavoritesScreen</Text>

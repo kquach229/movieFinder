@@ -19,12 +19,6 @@ const MoviesTabRoot=()=> {
             <MaterialCommunityIcons name="home" color={color} size={size} />
           ),
         }} name="HomeScreen" component={HomeScreen} />
-      <Tab.Screen options={{
-          tabBarLabel: 'Favorite',
-          tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="favorite" color={color} size={size} />
-          ),
-        }}  name="FavoriteMoviesScreens" component={FavoriteMoviesScreen} />
          <Tab.Screen options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color, size }) => (

@@ -3,8 +3,6 @@ import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import StarRatingComponent from "./StarRatingComponent";
 import { Card } from "native-base";
 
-
-
 const TvItem=(props)=> {
 
     console.log("TVITEMPROPS", props);
@@ -34,7 +32,7 @@ const TvItem=(props)=> {
                             <Text style={styles.TvItemTitle}>{props.route.params.item.name}</Text>
                             <View style={styles.TvItemSubinfo}>
                                 <Text><Text style={styles.releaseDate}>First Aired:</Text> {props.route.params.item.first_air_date}</Text>
-                                <Text><Text style={styles.originalLanguage}>Original language:</Text>{props.route.params.item.original_language.toUpperCase()}</Text>
+                                <Text><Text style={styles.originalLanguage}>Original language:</Text> {props.route.params.item.original_language.toUpperCase()}</Text>
                             </View>
                             <Text>{props.route.params.item.overview}</Text>
                             <StarRatingComponent rating={props.route.params.item.vote_average}/>

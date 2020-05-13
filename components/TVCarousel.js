@@ -11,11 +11,11 @@ const MyCarousel =({navigation})=> {
 
     const API_KEY2 = "69be92c192abcf1ad0768b2dc5245417";
 
-    const [popularMovies, setPopularMovies] = useState([]);
+    const [airingToday, setAiringToday] = useState([]);
      useEffect(()=> {
         const fetchData = async () => {
             const response = await axios.get(`https://api.themoviedb.org/3/tv/airing_today?api_key=${API_KEY2}`);
-            setPopularMovies(response.data.results);
+            setAiringToday(response.data.results);
             console.log("AIRING TODAY:", response.data)
         }
         fetchData();
@@ -39,7 +39,7 @@ const MyCarousel =({navigation})=> {
                     <Carousel
                         layout={'stack'} layoutCardOffset={`3`}
                         ref={(c) => { this._carousel = c; }}
-                        data={popularMovies}
+                        data={airingToday}
                         renderItem={this._renderItem}
                         sliderWidth={400}
                         itemWidth={180}
